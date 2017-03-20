@@ -1,0 +1,16 @@
+<div class="row component">
+    <div class="col s12">
+      <h4>{{title}}</h4>
+
+      <div *ngIf="bookDetails" class="book-details">
+          {{bookDetails.title}}<br>
+          {{bookDetails.subtitle}}<br>
+          {{bookDetails.isbn}}<br>
+          {{bookDetails.abstract}}<br>
+          {{bookDetails.numPages}}<br>
+          {{bookDetails.author}}<br>
+          <!--{{bookDetails.publisher?.name}}<br>
+          <a [href]="publisher.url" target="_blank">{{bookDetails.publisher?.url}}</a>-->
+      </div>
+    </div>
+</div>

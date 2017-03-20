@@ -1,0 +1,22 @@
+<div class="row component">
+    <div class="col s12">
+        <h4>{{title}}</h4>
+        <div class="book-list">
+            <button class="btn waves-effect waves-light red lighten-2" (click)="isHidden=!isHidden">Toggle Info-Box</button>
+
+            <div [hidden]="isHidden" class="info-box">
+                Awesome Info-Box
+            </div>
+
+            <div class="col s6">
+                <ul class="collection with-header" *ngIf="books">
+                    <li class="collection-header black-text"><h4>Book Titles</h4></li>
+                    <li class="collection-item black-text" *ngFor="let book of books">
+                        {{book.title}}<br>
+                        <a class="blue-text" [routerLink]="['/books', book.isbn]">{{book.isbn}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
